@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Iniciando layout principal onde todas as informacoes da pagina serao inseridas-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Cor_padrao"
+    tools:context="com.safelocker.Activity_EsqueceuSenha">
+
+    <!--Botão padrão para "Voltar" à tela anterior-->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_Voltar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="340dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Inserindo cor de fundo do aplicativo-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/background_firstcolor"
+        >
+
+        <!--Texto informativo - Titulo da pagina-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:gravity="center"
+            android:text="@string/esqueceu_senha"
+            android:textColor="@color/Cor_padrao"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Texto informativo - Subtitulo da pagina-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/SubTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:fontFamily="@font/roboto"
+            android:layout_marginEnd="56dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/recuperar_senha"
+            android:textColor="@color/Cor_padrao"
+            android:textSize="16sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Titulo" />
+
+        <!--Insercao do campo de email, onde o usuario deve inserir o email da conta que quer recuperar-->
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etEmail"
+            android:layout_width="280dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="66dp"
+            android:background="@drawable/bckground_btn_register"
+            android:fontFamily="@font/roboto_light"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="15dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SubTexto" />
+
+        <!--Botão "Recuperar" que dispara o e-mail de recuperacao para o usuario-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEnviar"
+            android:layout_width="325dp"
+            android:layout_height="50dp"
+            android:background="@drawable/bckground_btn_register"
+            android:backgroundTint="@color/Cor_padrao"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/btn_recuperar"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail"
+            app:layout_constraintVertical_bias="0.102" />
+
+        <!--Texto informativo-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/entrarConta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/tem_conta"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.348"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnEnviar" />
+
+        <!--Insercao do botao que direciona usuario para tela de login-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/entrarConta2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/entrar"
+            android:textColor="@color/Cor_padrao"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/entrarConta"
+            app:layout_constraintTop_toBottomOf="@+id/btnEnviar"
+            app:layout_constraintVertical_bias="1.0"
+            app:fontFamily="@font/roboto"
+            android:textStyle="bold"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

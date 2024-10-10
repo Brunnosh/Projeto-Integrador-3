@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Iniciando layout principal onde todas as informacoes da pagina serao inseridas-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="10dp"
+    android:background="@drawable/borda"
+    android:layout_marginTop="10dp"
+    android:backgroundTint="@color/quantum_bluegrey200"
+    >
+
+    <!--Texto informativo - Nome no cartao-->
+    <TextView
+        android:id="@+id/textViewNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="19dp"
+        android:fontFamily="@font/roboto_bold"
+        android:padding="8dp"
+        android:text="vitor hugo amaro"
+        android:textColor="@color/Cor_padrao"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--Imagem ilustrativa-->
+    <ImageView
+        android:id="@+id/ImgChipe"
+        android:layout_width="55dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="59dp"
+        android:src="@drawable/chipe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Texto informativo - Numero do cartao-->
+    <TextView
+        android:id="@+id/textViewNumero"
+        android:layout_width="347dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:text="010 0110 0111 0111"
+        android:textColor="@color/Cor_padrao"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Texto informativo - Validade-->
+    <TextView
+        android:id="@+id/textViewValidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/roboto"
+        android:padding="8dp"
+        android:text="01/02"
+        android:textColor="@color/Cor_padrao"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewNome" />
+
+    <Button
+        android:id="@+id/btnApagar"
+        android:layout_width="103dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:text="Apagar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

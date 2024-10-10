@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Iniciando layout principal onde todas as informacoes da pagina serao inseridas-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Cor_padrao"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--Botão padrão para "Voltar" à tela anterior-->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_Voltar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--Logo do aplicativo-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ic_Voltar" />
+
+    <!--Inserindo cor de fundo do aplicativo - Layout onde serao exibidas as informacoes principais-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background_firstcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!--Texto informativo - Título da página-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/alfa_slab_one"
+            android:gravity="center"
+            android:text="@string/dados_compra"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!--Container que armazena as informacoes principais da página-->
+        <LinearLayout
+            android:id="@+id/Linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            android:background="@drawable/borda"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/dados"
+            tools:layout_editor_absoluteX="35dp">
+
+
+            <!--Texto informativo - Subtítulo do primeiro conjunto de informacoes-->
+            <!--Informacoes sobre a localizacao do armario-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/localizacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/alfa_slab_one"
+                android:gravity="center"
+                android:text="@string/localizacao"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.087" />
+
+            <!--Container que armazena as imagens e informacoes sobre a localizacao do armario-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/localizacao">
+
+                <!--Imagem ilustrativa-->
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/armario" />
+
+                <!--Container que armazena as informacoes da localizacao-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAba"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/teste"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAba2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/teste"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAba3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/teste"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Texto informativo - subtitulo segundo conjunto de informacoes-->
+            <!--Informacoes sobre periodo de tempo e valores e opcoes de selecionar tempo desejado-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/duracao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alfa_slab_one"
+                android:gravity="center"
+                android:text="@string/escolha_duracao"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.087" />
+
+            <!--Insercao de container para exibir informacoes de hora e valor-->
+            <!--Duracao de 30min-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <!--Opcao de selecionar tempo-->
+                <CheckBox
+                    android:id="@+id/checkBox1"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/trinta_min"
+                    android:checked="false" />
+                <!--Informacao do valor para aquele periodo de tempo-->
+                <TextView
+                    android:id="@+id/check1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/preco_teste"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <!--Insercao de container para exibir informacoes de hora e valor-->
+            <!--Duracao de 1hora-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <!--Opcao de selecionar tempo-->
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uma_hora"
+                    android:checked="false" />
+                <!--Informacao do valor para aquele periodo de tempo-->
+                <TextView
+                    android:id="@+id/check2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/preco_teste"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <!--Insercao de container para exibir informacoes de hora e valor-->
+            <!--Duracao de 2horas-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+                <!--Opcao de selecionar tempo-->
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/duas_horas"
+                    android:checked="false" />
+                <!--Informacao do valor para aquele periodo de tempo-->
+                <TextView
+                    android:id="@+id/check3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/preco_teste"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <!--Insercao de container para exibir informacoes de hora e valor-->
+            <!--Duracao de 4horas-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+                <!--Opcao de selecionar tempo-->
+                <CheckBox
+                    android:id="@+id/checkBox4"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quatro_horas"
+                    android:checked="false" />
+                <!--Informacao do valor para aquele periodo de tempo-->
+                <TextView
+                    android:id="@+id/check4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/preco_teste"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+                <!--Opcao de selecionar tempo-->
+                <CheckBox
+                    android:id="@+id/checkBox5"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Até as 18 horas:"
+                    android:checked="false" />
+                <!--Informacao do valor para aquele periodo de tempo-->
+                <TextView
+                    android:id="@+id/check5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/preco_teste"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <!--Texto informativo - subtitulo terceiro conjunto de informacoes-->
+            <!--Informacoes sobre cartao que sera utilizado para o pagamento-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/pagamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alfa_slab_one"
+                android:gravity="center"
+                android:text="@string/pagamento"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.087" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Selecione um cartão"
+                >
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/autocompleteText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:maxHeight="30dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Opcao de adicionar novo cartao-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cartaoAdicionar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/adicionar_cartao"
+                android:textColor="@color/SegundaCorPadrao"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.087" />
+
+            <!--Container que armazena informacoes que devem ser exibidas para o usuario-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <!--Imagem ilustrativa para que o usuario tenha atencao no que esta sendo informado-->
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/exclamacao3" />
+
+                <!--Container para armazenar as informacoes de texto e organiza-las na tela-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:orientation="vertical">
+
+                    <!--Texto informativo - Informacoes sobre caucao-->
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/informativo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/info1"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.087" />
+
+                    <!--Texto informativo - Informacoes sobre caucao-->
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/informativo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/info2"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.087" />
+
+                    <!--Texto informativo - Informacoes sobre caucao-->
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/informativo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/info3"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.087" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--Insercao do botão para finalizar a compra e concluir o pagamento-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPagar"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bckground_btn_register"
+            android:backgroundTint="@color/Cor_padrao"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="@string/btn_pagar"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Linear1"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

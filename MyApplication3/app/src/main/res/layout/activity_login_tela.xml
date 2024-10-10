@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Iniciando layout principal onde todas as informacoes da pagina serao inseridas-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Cor_padrao"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--Botão padrão para "Voltar" à tela anterior-->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_Voltar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!--Inserindo cor de fundo do aplicativo - Layout onde serao exibidas as informacoes principais-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/background_firstcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!-- colocar a edittext da senha materialdesinger-->
+
+        <!--Botao de acao "Entrar" que verifica login e senha e acessa o app-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEntrar"
+            android:layout_width="325dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="196dp"
+            android:background="@drawable/bckground_btn_register"
+            android:backgroundTint="@color/Cor_padrao"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="@string/btn_entrar"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.639"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!--Logo do app-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_safe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:text="@string/safe"
+            android:textColor="@color/SegundaCorPadrao"
+            android:textSize="58sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/Titulo_Logo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.028" />
+
+        <!--Logo do app-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Titulo_Logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="92dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:gravity="center"
+            android:text="@string/locker"
+            android:textColor="@color/Cor_padrao"
+            android:textSize="64sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_safe"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.988"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.36" />
+
+        <!--Texto informativo - Subtitulo-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/SubTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="48dp"
+            android:text="@string/faca_login"
+            android:textColor="@color/Cor_padrao"
+            android:textSize="18sp"
+            app:fontFamily="@font/roboto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Titulo_Logo" />
+
+        <!--Texto informativo - Esqueceu a senha-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/esqueceuSenha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/esqueceu"
+            android:textColor="@color/Cor_padrao"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/TV_esqueceusenha2" />
+
+        <!--Botao "senha?" que direciona para tela de esqueceu a senha-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/TV_esqueceusenha2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/senha"
+            android:textColor="@color/SegundaCorPadrao"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/roboto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/esqueceuSenha"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+
+        <!--Texto informativo - Usuario sem conta-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/criarConta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="33dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/nao_tem_conta"
+            android:textColor="@color/Cor_padrao"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnEntrar"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!--Botao de acao "Criar conta" que direciona para tela de cadastro de usuario-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/criarConta2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/criar_conta"
+            android:textColor="@color/SegundaCorPadrao"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/roboto"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/criarConta"
+            app:layout_constraintTop_toBottomOf="@+id/btnEntrar"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <!--Layout do campo de "E-mail"-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="1dp"
+            android:clickable="true"
+            android:hint="@string/hint_email"
+            android:textColorHint="@color/Cor_padrao"
+            app:boxBackgroundColor="@color/cinza_projeto"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/Cor_padrao"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/Cor_padrao"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/Cor_padrao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SubTexto"
+            app:startIconDrawable="@drawable/outline_email_24"
+            app:startIconTint="@color/SegundaCorPadrao">
+
+            <!--Input para inserir e-mail-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Et_Email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/Cor_padrao" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Layout do campo de senha-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout3"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:hint="@string/hint_senha"
+            android:textColorHint="@color/Cor_padrao"
+            app:boxBackgroundColor="@color/cinza_projeto"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/Cor_padrao"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/Cor_padrao"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/Cor_padrao"
+            app:layout_constraintBottom_toTopOf="@+id/btnEntrar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            app:layout_constraintVertical_bias="0.100000024"
+            app:startIconDrawable="@drawable/outline_lock_24"
+            app:startIconTint="@color/SegundaCorPadrao">
+
+            <!--Input para inserir senha-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Et_Senha"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                android:textColor="@color/Cor_padrao" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Logo-->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="202dp"
+            android:layout_height="111dp"
+            android:layout_marginStart="136dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/primeira_img_recycleview" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

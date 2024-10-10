@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "912254768477",
+    "project_id": "pi3-es-2024-time4",
+    "storage_bucket": "pi3-es-2024-time4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:912254768477:android:1b492b1bbfe1f3d84644b4",
+        "android_client_info": {
+          "package_name": "com.safelocker"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn1drQkU6WqrSyLl2KyBJJG2e5KZ64RRc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

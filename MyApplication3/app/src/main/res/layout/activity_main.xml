@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Iniciando layout principal onde todas as informacoes da pagina serao inseridas-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Cor_padrao"
+    >
+
+    <!-- mudar o roboto light pra semibold -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!--Container que contem os botoes de mapa e entrar-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
+        android:background="@drawable/navigation_app"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!--Botao "Entrar" que direciona usuario para tela de bifurcacao-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/BtnEntrar"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="52dp"
+            android:background="@drawable/bckground_btn_register"
+            android:backgroundTint="@color/Cor_padrao"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="@string/entrar"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/BtnMapa" />
+
+        <!--Botao "Mapa" que direciona o usuario para tela de mapa com pins-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/BtnMapa"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="52dp"
+            android:background="@drawable/bckground_btn_register"
+            android:backgroundTint="@color/grey_ligth"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="@string/btn_mapa"
+            android:textAlignment="center"
+            android:textColor="@color/Cor_padrao"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

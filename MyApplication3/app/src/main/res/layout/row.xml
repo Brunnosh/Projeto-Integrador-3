@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Iniciando layout principal onde todas as informacoes da pagina serao inseridas-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="800dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+    <!--Layout que contem as imagens ilustrativas da tela principal-->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        >
+
+        <!---->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/Img_Background"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/backgrounddefault" />
+
+        <!--Logo do app-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="44sp" />
+
+        <!--Imagem ilustrativa-->
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/ImageView"
+            android:layout_width="match_parent"
+            android:layout_height="398dp"
+            android:layout_marginTop="70dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/quarta_img_reycleview" />
+
+        <!--Texto informativo - Slogan-->
+        <TextView
+            android:id="@+id/tv_Descrição"
+            android:layout_width="398dp"
+            android:layout_height="132dp"
+            android:layout_below="@+id/ImageView"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="13dp"
+            android:layout_marginRight="15dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/sinta_se_seguro"
+            android:textColor="@color/white"
+            android:textSize="34sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Titulo_menor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_Descrição"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="292dp"
+            android:layout_marginTop="-93dp"
+            android:layout_marginBottom="180dp"
+            android:elevation="15dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textAlignment="center"
+            android:textColor="@color/Cor_padrao"
+            android:textSize="36dp"
+            android:textStyle="bold" />
+
+        <!--Texto ilustrativo-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Titulo_menor2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_Descrição"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="-45dp"
+            android:layout_marginBottom="180dp"
+            android:elevation="15dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:gravity="center"
+            android:text="@string/armario2"
+            android:textAlignment="center"
+            android:textColor="@color/SegundaCorPadrao"
+            android:textSize="36dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

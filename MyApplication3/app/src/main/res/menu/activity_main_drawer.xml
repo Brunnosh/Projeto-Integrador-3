@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_maps"
+            android:icon="@drawable/outline_map_24"
+            android:iconTint="@color/SegundaCorPadrao"
+            android:title="@string/btn_mapa" />
+        <item
+            android:id="@+id/nav_card"
+            android:icon="@drawable/baseline_credit_card_24"
+            android:title="@string/btn_cartoes" />
+        <item
+            android:id="@+id/nav_compra"
+            android:icon="@drawable/outline_shopping_cart_24"
+            android:title="@string/btn_locacoes" />
+    </group>
+</menu>
+<!--Configuração do menu da view drawer-->

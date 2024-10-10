@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Iniciando layout principal onde todas as informacoes da pagina serao inseridas-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Cor_padrao"
+    tools:context=".safelocker.Activity_QrCode">
+
+    <!--Botão padrão para "Voltar" à tela anterior-->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_Voltar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!--Inserindo cor de fundo do aplicativo-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/background_firstcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!--Texto informativo - Titulo da pagina-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView"
+            android:layout_width="match_parent"
+            android:layout_height="129dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center"
+            android:text="@string/qr_code"
+            android:textColor="@color/Cor_padrao"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Texto informativo - Subtitulo da pagina-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/sub_texto_qr_code"
+            android:textColor="@color/Cor_padrao"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
+
+        <!--Imagem QRCode-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/dynamicQrCodeImageView"
+            android:layout_width="353dp"
+            android:layout_height="242dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3" />
+
+        <!--Texto informativo - Informa o usuario sobre o dado retornado abaixo-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/infoUnidade"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/unidade"
+            android:textColor="@color/Cor_padrao"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/dynamicQrCodeImageView" />
+
+        <!--Texto informativo - Retorna informacoes sobre a compra-->
+        <!--Informacoes sobre unidade-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Tv_Unidade"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:fontFamily="@font/roboto"
+            android:text="@string/teste"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/infoUnidade"
+            app:layout_constraintTop_toBottomOf="@+id/infoUnidade"
+            app:layout_constraintEnd_toEndOf="@id/infoUnidade"
+          />
+
+        <!--Texto informativo - Informa o usuario sobre o dado retornado abaixo-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/infoGerente"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/gerente"
+            android:textColor="@color/Cor_padrao"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/infoUnidade" />
+
+        <!--Texto informativo - Retorna informacoes sobre a compra-->
+        <!--Informacoes sobre gerente-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Tv_gerente"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="@string/teste"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/infoGerente"
+            app:layout_constraintTop_toBottomOf="@+id/infoGerente"
+            app:layout_constraintEnd_toEndOf="@id/infoGerente"
+            />
+
+        <!--Texto informativo - Informa o usuario sobre o dado retornado abaixo-->
+
+
+        <!--Texto informativo - Informa o usuario sobre o dado retornado abaixo-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/infoRua"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/rua"
+            android:textColor="@color/Cor_padrao"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/infoGerente" />
+
+        <!--Container que armazena informacoes sobre o endereco do armario-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/infoRua"
+            app:layout_constraintStart_toStartOf="@id/infoRua"
+            app:layout_constraintEnd_toEndOf="@id/infoRua"
+
+            >
+            <!--Texto informativo - Retorna informacoes sobre a compra-->
+            <!--Informacoes sobre endereco-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/Tv_rua"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="@string/teste"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/infoRua"
+                app:layout_constraintTop_toBottomOf="@+id/infoRua" />
+
+            <!--Texto informativo - Retorna informacoes sobre a compra-->
+            <!--Informacoes sobre endereco-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/Tv_numero"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="@string/teste"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/Tv_rua"
+                app:layout_constraintTop_toBottomOf="@+id/infoRua" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

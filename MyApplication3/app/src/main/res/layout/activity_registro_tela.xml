@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Iniciando layout principal onde todas as informacoes da pagina serao inseridas-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Cor_padrao"
+    tools:layout_editor_absoluteX="4dp"
+    tools:layout_editor_absoluteY="-41dp">
+
+    <!--Botão padrão para "Voltar" à tela anterior-->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_Voltar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Inserindo cor de fundo do aplicativo - Layout onde serao exibidas as informacoes principais-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/background_firstcolor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.931"
+        tools:ignore="MissingConstraints">
+
+        <!--Botao de acao "Registrar" que salva cadastro no banco-->
+
+        <!--Logo do app-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEfetuarCadastro"
+            android:layout_width="325dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/bckground_btn_register"
+            android:backgroundTint="@color/Cor_padrao"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/btn_registrar"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.651"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout7"
+            app:layout_constraintVertical_bias="0.227" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/safe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginBottom="64dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:text="@string/safe"
+            android:textColor="@color/SegundaCorPadrao"
+            android:textSize="58sp"
+            app:layout_constraintBottom_toTopOf="@+id/SubTexto"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!--Logo do app-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/locker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:text="@string/locker"
+            android:textColor="@color/Cor_padrao"
+            android:textSize="58sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Texto informativo - Titulo da pagina-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/SubTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/faca_cadastro"
+            android:textColor="@color/Cor_padrao"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.526"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locker" />
+
+        <!--Layout do campo "Nome"-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            android:hint="@string/hint_nome"
+
+            android:textColorHint="@color/Cor_padrao"
+            app:boxBackgroundColor="@color/cinza_projeto"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/Cor_padrao"
+            app:cursorColor="@color/Cor_padrao"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/Cor_padrao"
+            app:helperTextEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/SegundaCorPadrao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.576"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SubTexto"
+            app:startIconDrawable="@drawable/outline_perm_identity_24"
+            app:startIconTint="@color/SegundaCorPadrao">
+
+            <!--Input para inserir nome-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Et_Nome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:textColor="@color/Cor_padrao"
+                tools:layout_editor_absoluteX="35dp"
+                tools:layout_editor_absoluteY="177dp" />
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Layout do campo "CPF"-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            android:hint="@string/hint_cpf"
+            android:textColorHint="@color/Cor_padrao"
+            app:boxBackgroundColor="@color/cinza_projeto"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/Cor_padrao"
+            app:cursorColor="@color/Cor_padrao"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/Cor_padrao"
+            app:hintAnimationEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.576"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            app:startIconDrawable="@drawable/icone_cpf"
+            app:startIconTint="@color/SegundaCorPadrao">
+
+            <!--Input para inserir CPF-->
+            <com.santalu.maskara.widget.MaskEditText
+                android:id="@+id/Et_CPF"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="CPF"
+                android:inputType="numberDecimal"
+                app:mask="___.___.___-__"
+                app:maskCharacter ="_"
+                app:maskStyle="normal"
+                android:maxLength="14"
+                android:textColor="@color/Cor_padrao"
+                tools:layout_editor_absoluteX="35dp"
+                tools:layout_editor_absoluteY="240dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Layout do campo "Email"-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout5"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            android:hint="@string/hint_email"
+            android:textColorHint="@color/Cor_padrao"
+            app:boxBackgroundColor="@color/cinza_projeto"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/Cor_padrao"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/Cor_padrao"
+            app:hintAnimationEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.542"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
+            app:startIconDrawable="@drawable/outline_email_24"
+            app:startIconTint="@color/SegundaCorPadrao">
+
+            <!--Input para inserir email-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Et_Email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/Cor_padrao"
+                tools:layout_editor_absoluteX="33dp"
+                tools:layout_editor_absoluteY="365dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Layout do campo "Senha"-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout6"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            android:hint="@string/hint_senha"
+            android:textColorHint="@color/Cor_padrao"
+            app:boxBackgroundColor="@color/cinza_projeto"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/Cor_padrao"
+            app:hintAnimationEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.542"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/Cor_padrao"
+            app:startIconDrawable="@drawable/outline_lock_24"
+            app:startIconTint="@color/SegundaCorPadrao">
+
+            <!--Input para inserir senha-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Et_Senha"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                android:textColor="@color/Cor_padrao"
+                tools:layout_editor_absoluteX="33dp"
+                tools:layout_editor_absoluteY="428dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Layout do campo "Confirmar senha"-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout7"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="1dp"
+            android:hint="@string/hint_confirmar_senha"
+            android:textColorHint="@color/Cor_padrao"
+            app:boxBackgroundColor="@color/cinza_projeto"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/Cor_padrao"
+            app:hintAnimationEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.593"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout6"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/Cor_padrao"
+            app:startIconDrawable="@drawable/outline_lock_24"
+            app:startIconTint="@color/SegundaCorPadrao">
+
+            <!--Input para inserir confirmar senha-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Et_ConfirmarSenha"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPassword"
+                android:textColor="@color/Cor_padrao"
+                tools:layout_editor_absoluteX="36dp"
+                tools:layout_editor_absoluteY="491dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Texto ilustrativo - login-->
+
+        <!--Botao de acao que direciona para tela de login-->
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Tv_JatemUmaConta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:text="@string/ja_tem_conta"
+            android:textColor="@color/Cor_padrao"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.463"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnEfetuarCadastro"
+            app:layout_constraintVertical_bias="0.285" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Tv_JatemUmaConta_Btn"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginStart="3dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/entrar"
+            android:textColor="@color/SegundaCorPadrao"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintStart_toEndOf="@+id/Tv_JatemUmaConta"
+            app:layout_constraintTop_toBottomOf="@+id/btnEfetuarCadastro"
+            app:layout_constraintVertical_bias="0.266" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="127dp"
+            android:layout_height="108dp"
+            android:layout_marginEnd="96dp"
+            app:layout_constraintBottom_toTopOf="@+id/locker"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/primeira_img_recycleview" />
+
+        <!--Layout do campo "Nascimento"-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout3"
+            android:layout_width="160dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:hint="@string/hint_data"
+            android:textColorHint="@color/Cor_padrao"
+            app:boxBackgroundColor="@color/cinza_projeto"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/SegundaCorPadrao"
+            app:hintAnimationEnabled="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+            app:startIconDrawable="@drawable/outline_calendar_month_24"
+            app:startIconTint="@color/SegundaCorPadrao">
+
+            <!--Input para inserir nascimento-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Et_Nascimento"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="date"
+                android:textColor="@color/Cor_padrao"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="302dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Layout do campo "Telefone"-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout4"
+            android:layout_width="187dp"
+            android:layout_height="58dp"
+            android:layout_marginEnd="15dp"
+            android:hint="@string/hint_telefone"
+            android:textColorHint="@color/Cor_padrao"
+            app:boxBackgroundColor="@color/cinza_projeto"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/Cor_padrao"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/Cor_padrao"
+            app:hintAnimationEnabled="true"
+            app:layout_constraintBottom_toBottomOf="@+id/textInputLayout3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:startIconDrawable="@drawable/outline_local_phone_24"
+            app:startIconTint="@color/SegundaCorPadrao">
+
+            <!--Input para inserir telefone-->
+            <com.santalu.maskara.widget.MaskEditText
+                android:id="@+id/Et_Telefone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:maxLength="15"
+                android:textColor="@color/Cor_padrao"
+                app:mask="(__) _____-____"
+                app:maskCharacter="_"
+                tools:layout_editor_absoluteX="217dp"
+                tools:layout_editor_absoluteY="302dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Iniciando layout principal onde todas as informacoes da pagina serao inseridas-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Cor_padrao"
+    tools:context="com.safelocker.Activity_EsqueceuSenha">
+
+    <!--Texto informativo - Título da página-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/acesso_armario"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Inserindo cor de fundo do aplicativo - Layout onde serao exibidas as informacoes principais-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/background_colorwhite"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!--Texto informativo - Subtítulo da página-->
+        <TextView
+            android:id="@+id/sub_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="42dp"
+            android:text="@string/escolha_uma_opcao"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Container que armazena icone e botao de "Abrir momentaneamente"-->
+        <LinearLayout
+            android:id="@+id/ConstaintAbrir"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/borda_azul"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/sub_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!--Icone de cadeado-->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/cadeado" />
+
+            <!--Botão de ação "Abrir momentaneamente"-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAbrir"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="2"
+                android:background="@drawable/bckground_btn_register"
+                android:backgroundTint="@color/Cor_padrao"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="@string/abrir_momentaneamente"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!--Container que armazena icone e botao de "Encerrar locação"-->
+        <LinearLayout
+            android:id="@+id/ConstraintEncerrar"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/borda_azul"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/ConstaintAbrir"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!--Icone cadeado-->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/cadeado" />
+
+            <!--Botão de ação "Encerrar locação"-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEncerrar"
+                android:layout_width="wrap_content"
+                android:layout_height="90dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_weight="2"
+                android:background="@drawable/bckground_btn_register"
+                android:backgroundTint="@color/Cor_padrao"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="center"
+                android:text="@string/encerrar_locacao"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!--Imagem ilustrativa-->
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:src="@drawable/segunda_img_recycleview"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toBottomOf="@id/ConstraintEncerrar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

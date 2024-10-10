@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Iniciando layout principal onde todas as informacoes da pagina serao inseridas-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Cor_padrao"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--Botão padrão para "Voltar" à tela anterior-->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ic_Voltar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.043"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!--Inserindo cor de fundo do aplicativo - Layout onde informacoes da pagina serao disponibilizadas-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_firstcolor"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="50dp">
+        <!--Layout do campo "Nome do cartao"-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutNome"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="1dp"
+            android:hint="@string/hint_nome_cartao"
+            android:textColorHint="@color/Cor_padrao"
+            app:boxBackgroundColor="@color/cinza_projeto"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/Cor_padrao"
+            app:hintAnimationEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/SubTexto">
+            <!--Insercao do nome do cartao-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Et_Nome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:textColor="@color/Cor_padrao" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--Layout do campo "Numero do cartao"-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutCartao"
+            android:layout_width="350dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="1dp"
+            android:hint="@string/hint_numero"
+            android:textColorHint="@color/Cor_padrao"
+            app:boxBackgroundColor="@color/cinza_projeto"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/Cor_padrao"
+            app:hintAnimationEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayoutNome">
+            <!--Insercao do numero do cartao-->
+            <com.santalu.maskara.widget.MaskEditText
+                android:id="@+id/Et_numCartao"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                app:mask="____ ____ ____ ____"
+                app:maskCharacter ="_"
+                app:maskStyle="normal"
+                android:maxLength="19"
+                android:textColor="@color/Cor_padrao" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Inserção do ano de validade do cartão-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutvalidadeAno"
+            android:layout_width="90dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="108dp"
+            android:hint="@string/hint_validadeAno"
+            android:textColorHint="@color/Cor_padrao"
+            app:boxBackgroundColor="@color/cinza_projeto"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/Cor_padrao"
+            app:boxStrokeErrorColor="@color/purple_500"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/Cor_padrao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textviewValidade">
+
+            <EditText
+                android:id="@+id/Et_ValidadeAno"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="datetime"
+                android:maxLength="5"
+                android:textColor="@color/Cor_padrao" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Texto informativo - Título do campo-->
+        <TextView
+            android:id="@+id/textviewValidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:textColor="@color/Cor_padrao"
+            android:text="Validade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCod" />
+
+        <!--Input para inserir mês da validade do cartão-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutvalidadeMes"
+            android:layout_width="90dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="4dp"
+            android:hint="@string/hint_validadeMes"
+            android:textColorHint="@color/Cor_padrao"
+            app:boxBackgroundColor="@color/cinza_projeto"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/Cor_padrao"
+            app:boxStrokeErrorColor="@color/purple_500"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/Cor_padrao"
+            app:layout_constraintEnd_toStartOf="@+id/textInputLayoutvalidadeAno"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textviewValidade">
+
+            <!--Insercao da validade do cartao-->
+            <EditText
+                android:id="@+id/Et_ValidadeMes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="datetime"
+                android:layout_marginEnd="5dp"
+                android:maxLength="5"
+                android:textColor="@color/Cor_padrao" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo para inserir CVV -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayoutCod"
+            android:layout_width="188dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="15dp"
+            android:hint="@string/hint_cvv"
+            android:textColorHint="@color/Cor_padrao"
+            app:boxBackgroundColor="@color/cinza_projeto"
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/Cor_padrao"
+            app:boxStrokeErrorColor="@color/purple_500"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/Cor_padrao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.486"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayoutCartao">
+
+            <!--Insercao do CVV-->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Et_codSeguranca"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                android:textColor="@color/Cor_padrao" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Botão de ação cadastrar cartão -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnInserirCartao"
+            android:layout_width="325dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="152dp"
+            android:background="@drawable/bckground_btn_register"
+            android:backgroundTint="#002880"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/btn_salvar"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!--Logo do app-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Tv_safe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:text="@string/locker"
+            android:textColor="@color/Cor_padrao"
+            android:textSize="58sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Logo do app-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/Titulo_Logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/alfa_slab_one"
+            android:text="@string/safe"
+            android:textColor="@color/SegundaCorPadrao"
+            android:textSize="58sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--Texto informativo - Titulo da pagina-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/SubTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="112dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/insira_dados"
+            android:textColor="@color/Cor_padrao"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Tv_safe" />
+
+        <!--Logo do app-->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="202dp"
+            android:layout_height="111dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="72dp"
+            android:src="@drawable/primeira_img_recycleview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="style" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/Cor_padrao</item>
+        <item name="colorPrimaryDark">@color/Cor_padrao</item>
+        <item name="colorAccent">@color/SegundaCorPadrao</item>
+    </style>
+    <style name="MyAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/Cor_padrao</item>
+    </style>
+</resources>

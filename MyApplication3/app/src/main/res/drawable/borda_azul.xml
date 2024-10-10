@@ -1,0 +1,10 @@
+<!-- Arquivo: borda.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/Cor_padrao" />
+    <stroke
+        android:width="2dp"
+        android:color="@color/white"
+        />
+    <corners android:radius="25dp"/>
+</shape>
